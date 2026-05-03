@@ -1,0 +1,104 @@
+{
+  "studio": {
+    "name": "LAV Art Studio",
+    "location": {
+      "city": "Bratislava",
+      "country": "Slovakia"
+    },
+    "programs": [
+      {
+        "category": "Painting",
+        "courses": [
+          {
+            "title": "Watercolor Basics",
+            "level": "Beginner",
+            "duration": {
+              "weeks": 4,
+              "lessons": 8
+            },
+            "teacher": {
+              "name": "Emma Novak",
+              "specialization": "Watercolor"
+            },
+            "price": 80
+          },
+          {
+            "title": "Acrylic Painting",
+            "level": "Intermediate",
+            "duration": {
+              "weeks": 6,
+              "lessons": 12
+            },
+            "teacher": {
+              "name": "Sofia Marin",
+              "specialization": "Acrylic"
+            },
+            "price": 120
+          }
+        ]
+      },
+      {
+        "category": "Drawing",
+        "courses": [
+          {
+            "title": "Portrait Drawing",
+            "level": "Advanced",
+            "duration": {
+              "weeks": 8,
+              "lessons": 16
+            },
+            "teacher": {
+              "name": "Daniel Kováč",
+              "specialization": "Portrait"
+            },
+            "price": 160
+          },
+          {
+            "title": "Sketching Fundamentals",
+            "level": "Beginner",
+            "duration": {
+              "weeks": 4,
+              "lessons": 8
+            },
+            "teacher": {
+              "name": "Daniel Kováč",
+              "specialization": "Sketching"
+            },
+            "price": 70
+          }
+        ]
+      },
+      {
+        "category": "Creative Workshops",
+        "courses": [
+          {
+            "title": "Mixed Media Art",
+            "level": "Intermediate",
+            "duration": {
+              "weeks": 6,
+              "lessons": 10
+            },
+            "teacher": {
+              "name": "Sofia Marin",
+              "specialization": "Mixed Media"
+            },
+            "price": 130
+          },
+          {
+            "title": "Kids Art Club",
+            "level": "Kids",
+            "duration": {
+              "weeks": 8,
+              "lessons": 8
+            },
+            "teacher": {
+              "name": "Emma Novak",
+              "specialization": "Children Art"
+            },
+            "price": 60
+          }
+        ]
+      }
+    ]
+  }
+}
