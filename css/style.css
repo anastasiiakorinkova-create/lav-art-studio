@@ -845,3 +845,16 @@ a {
         padding: 30px;
     }
 }
+.server-note {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.ajax-error {
+    text-align: center;
+    padding: 40px;
+    color: var(--muted);
+    line-height: 1.7;
+}

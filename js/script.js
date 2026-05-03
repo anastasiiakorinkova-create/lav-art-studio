@@ -71,7 +71,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (tableBody) {
         fetch("data/courses.json")
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Courses data could not be loaded.");
+                }
+
+                return response.json();
+            })
             .then(data => {
                 data.studio.programs.forEach(program => {
                     program.courses.forEach(course => {
@@ -92,7 +98,9 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(() => {
                 tableBody.innerHTML = `
                     <tr>
-                        <td colspan="5">Courses data could not be loaded.</td>
+                        <td colspan="5" class="ajax-error">
+                            Courses could not be loaded. Please run the project using a local server, for example VS Code Live Server or python -m http.server.
+                        </td>
                     </tr>
                 `;
             });

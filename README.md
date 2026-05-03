@@ -1,35 +1,58 @@
-# LAV Art Studio
+LAV Art Studio – Web Technologies Project
 
-## Description
-This project is a web portal for an art studio located in Bratislava. It presents information about courses, events, gallery and allows users to contact the studio through a form.
+Project Description
+This project is a static web portal created as part of the Web Technologies & Design course.  
+The website represents an art studio and includes information about courses, gallery, events and contact form.
 
-## Technologies Used
-- HTML5
-- CSS3
-- JavaScript
-- JSON
-- AJAX (Fetch API)
+Project Structure
+The project consists of:
+- Home page (index.html)
+- About page (about.html)
+- Courses page (courses.html)
+- Gallery page (gallery.html)
+- Events page (events.html)
+- Contact page (contact.html)
 
-## Project Structure
-- index.html – home page
-- about.html – information about the studio and team
-- courses.html – courses list loaded from JSON using AJAX
-- gallery.html – gallery with image preview (lightbox)
-- events.html – upcoming events
-- contact.html – contact form with validation
-- css/style.css – main stylesheet
-- js/script.js – JavaScript logic (validation, AJAX, gallery)
-- data/courses.json – data source for courses
+All pages are styled using a single CSS file and include responsive design.
 
-## How to Run the Project
-1. Download or clone the repository from GitHub
-2. Open the project folder
-3. Run index.html in a web browser
+Features Implemented
 
-## Features
-- Responsive multi-page website
-- Custom CSS design
-- Image gallery with preview functionality
-- Contact form with client-side validation
-- Dynamic data loading from JSON using AJAX
+Task 1 – Website Design
+The website design was created and implemented according to a custom visual concept.
+The design is included in the repository in PDF format.
 
+Task 2 – Static Website
+- Fully functional website with 6 pages
+- Unified design and navigation
+- Custom CSS styling
+- Gallery section with image preview (JavaScript lightbox)
+
+Task 3 – Form with Validation
+- Contact form with multiple input types:
+  text, email, phone, textarea, radio buttons, checkbox, select
+- Client-side validation implemented using JavaScript
+- Error messages and success message handling
+
+Task 4 – Data and AJAX
+- JSON file with nested structure (courses data)
+- Data loaded asynchronously using fetch (AJAX)
+- Dynamic rendering of courses into a table
+
+How to Run the Project
+
+Important:
+The project uses AJAX (fetch) to load JSON data.
+For this reason, it must be run via a local server.
+
+Option 1 (recommended):
+Open the project in Visual Studio Code and use the Live Server extension.
+
+Option 2:
+Run a local server using Python:
+python -m http.server
+
+Then open in browser:
+http://localhost:8000
+
+GitHub Repository
+The project source code is hosted on GitHub and includes version control with descriptive commit messages.
