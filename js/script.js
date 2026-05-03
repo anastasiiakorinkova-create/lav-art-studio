@@ -113,3 +113,30 @@ document.addEventListener("DOMContentLoaded", function () {
             });
     }
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const galleryButtons = document.querySelectorAll(".image-gallery .gallery-box");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    if (galleryButtons.length && lightbox && lightboxImage && lightboxClose) {
+        galleryButtons.forEach(button => {
+            button.addEventListener("click", function () {
+                lightboxImage.src = this.dataset.image;
+                lightbox.classList.add("open");
+            });
+        });
+
+        lightboxClose.addEventListener("click", function () {
+            lightbox.classList.remove("open");
+            lightboxImage.src = "";
+        });
+
+        lightbox.addEventListener("click", function (e) {
+            if (e.target === lightbox) {
+                lightbox.classList.remove("open");
+                lightboxImage.src = "";
+            }
+        });
+    }
+});
