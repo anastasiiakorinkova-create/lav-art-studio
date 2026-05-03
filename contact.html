@@ -2,9 +2,149 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - LAV Art Studio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
 </head>
 <body>
 
+<header class="site-header">
+    <a href="index.html" class="logo">
+        <img src="images/logo.svg" alt="LAV Art Studio">
+        <div class="logo-text">
+            <span>LAV</span>
+            <small>Art Studio</small>
+        </div>
+    </a>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="page-hero">
+        <p class="eyebrow">Book your creative class</p>
+        <h1>Contact Us</h1>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-grid">
+
+            <div class="contact-info">
+                <p class="eyebrow">Visit our studio</p>
+                <h2>Let’s create something beautiful together.</h2>
+                <p class="contact-text">Have a question about our courses, workshops or private lessons? Send us a message and we will contact you soon.</p>
+
+                <div class="contact-list">
+                    <p>Bratislava, Slovakia</p>
+                    <p>+421 123 456 789</p>
+                    <p>info@lavstudio.sk</p>
+                    <p>www.lavstudio.sk</p>
+                </div>
+            </div>
+
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name">
+                        <small class="error-message" id="nameError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email">
+                        <small class="error-message" id="emailError"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Your phone">
+                        <small class="error-message" id="phoneError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="course">Course</label>
+                        <select id="course" name="course">
+                            <option value="">Select a course</option>
+                            <option value="watercolor">Watercolor Basics</option>
+                            <option value="acrylic">Acrylic Painting</option>
+                            <option value="portrait">Portrait Drawing</option>
+                            <option value="mixed-media">Mixed Media Art</option>
+                        </select>
+                        <small class="error-message" id="courseError"></small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your message"></textarea>
+                    <small class="error-message" id="messageError"></small>
+                </div>
+
+                <div class="form-group">
+                    <span class="form-label">Preferred contact</span>
+                    <div class="choice-row">
+                        <label>
+                            <input type="radio" name="preferredContact" value="email">
+                            Email
+                        </label>
+                        <label>
+                            <input type="radio" name="preferredContact" value="phone">
+                            Phone
+                        </label>
+                    </div>
+                    <small class="error-message" id="preferredContactError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="source">How did you hear about us?</label>
+                    <select id="source" name="source">
+                        <option value="">Select an option</option>
+                        <option value="social">Social Media</option>
+                        <option value="friends">Friends / Family</option>
+                        <option value="google">Google Search</option>
+                        <option value="ads">Online Ads</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <small class="error-message" id="sourceError"></small>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms">
+                        I agree with the terms and conditions
+                    </label>
+                    <small class="error-message" id="termsError"></small>
+                </div>
+
+                <button type="submit" class="button primary-button">Send Message</button>
+
+                <p class="success-message" id="successMessage"></p>
+            </form>
+
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 LAV Art Studio. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
 </body>
 </html>
