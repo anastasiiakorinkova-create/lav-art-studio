@@ -2,9 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - LAV Art Studio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
 </head>
 <body>
+
+<header class="site-header">
+    <a href="index.html" class="logo">
+        <img src="images/logo.svg" alt="LAV Art Studio">
+        <div class="logo-text">
+            <span>LAV</span>
+            <small>Art Studio</small>
+        </div>
+    </a>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="courses.html">Courses</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="events.html">Events</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="page-hero">
+        <p class="eyebrow">Student artworks and studio moments</p>
+        <h1>Gallery</h1>
+    </section>
+
+    <section class="full-gallery-section">
+        <div class="gallery-filters">
+            <button class="filter-button active">All</button>
+            <button class="filter-button">Paintings</button>
+            <button class="filter-button">Drawings</button>
+            <button class="filter-button">Students</button>
+            <button class="filter-button">Studio</button>
+        </div>
+
+        <div class="full-gallery-grid">
+            <div class="gallery-box tall"></div>
+            <div class="gallery-box"></div>
+            <div class="gallery-box wide"></div>
+            <div class="gallery-box"></div>
+            <div class="gallery-box"></div>
+            <div class="gallery-box tall"></div>
+            <div class="gallery-box wide"></div>
+            <div class="gallery-box"></div>
+            <div class="gallery-box"></div>
+            <div class="gallery-box"></div>
+        </div>
+
+        <p class="gallery-note">Click on any image to view larger</p>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <p>© 2026 LAV Art Studio. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
