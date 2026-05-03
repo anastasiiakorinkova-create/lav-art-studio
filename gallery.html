@@ -6,6 +6,7 @@
     <title>Gallery - LAV Art Studio</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="images/logo.svg">
@@ -32,7 +33,6 @@
 </header>
 
 <main>
-
     <section class="page-hero">
         <p class="eyebrow">Student artworks and studio moments</p>
         <h1>Gallery</h1>
@@ -40,69 +40,63 @@
 
     <section class="full-gallery-section">
         <div class="full-gallery-grid image-gallery">
-            <button class="gallery-box" data-image="images/gallery1.jpg">
+            <a class="gallery-box" href="images/gallery1.jpg" data-lightbox="lav-gallery" data-title="Artwork in LAV Art Studio">
                 <img src="images/gallery1.jpg" alt="Artwork in LAV Art Studio">
-            </button>
+            </a>
 
-            <button class="gallery-box" data-image="images/gallery2.jpg">
+            <a class="gallery-box" href="images/gallery2.jpg" data-lightbox="lav-gallery" data-title="Landscape artwork in LAV Art Studio">
                 <img src="images/gallery2.jpg" alt="Landscape artwork in LAV Art Studio">
-            </button>
+            </a>
 
-            <button class="gallery-box" data-image="images/gallery3.jpg">
+            <a class="gallery-box" href="images/gallery3.jpg" data-lightbox="lav-gallery" data-title="Creative artwork in LAV Art Studio">
                 <img src="images/gallery3.jpg" alt="Creative artwork in LAV Art Studio">
-            </button>
+            </a>
 
-            <button class="gallery-box" data-image="images/gallery4.jpg">
+            <a class="gallery-box" href="images/gallery4.jpg" data-lightbox="lav-gallery" data-title="Still life artwork in LAV Art Studio">
                 <img src="images/gallery4.jpg" alt="Still life artwork in LAV Art Studio">
-            </button>
+            </a>
 
-            <button class="gallery-box" data-image="images/gallery5.jpg">
+            <a class="gallery-box" href="images/gallery5.jpg" data-lightbox="lav-gallery" data-title="Painting from LAV Art Studio gallery">
                 <img src="images/gallery5.jpg" alt="Painting from LAV Art Studio gallery">
-            </button>
+            </a>
 
-            <button class="gallery-box" data-image="images/gallery6.jpg">
+            <a class="gallery-box" href="images/gallery6.jpg" data-lightbox="lav-gallery" data-title="Student painting from LAV Art Studio">
                 <img src="images/gallery6.jpg" alt="Student painting from LAV Art Studio">
-            </button>
+            </a>
 
-            <button class="gallery-box" data-image="images/gallery7.jpg">
+            <a class="gallery-box" href="images/gallery7.jpg" data-lightbox="lav-gallery" data-title="Art course result from LAV Art Studio">
                 <img src="images/gallery7.jpg" alt="Art course result from LAV Art Studio">
-            </button>
+            </a>
 
-            <button class="gallery-box" data-image="images/gallery8.jpg">
+            <a class="gallery-box" href="images/gallery8.jpg" data-lightbox="lav-gallery" data-title="Creative painting from LAV Art Studio">
                 <img src="images/gallery8.jpg" alt="Creative painting from LAV Art Studio">
-            </button>
+            </a>
 
-            <button class="gallery-box" data-image="images/gallery9.jpg">
+            <a class="gallery-box" href="images/gallery9.jpg" data-lightbox="lav-gallery" data-title="Artwork detail from LAV Art Studio">
                 <img src="images/gallery9.jpg" alt="Artwork detail from LAV Art Studio">
-            </button>
+            </a>
 
-            <button class="gallery-box" data-image="images/gallery10.jpg">
+            <a class="gallery-box" href="images/gallery10.jpg" data-lightbox="lav-gallery" data-title="Colorful painting from LAV Art Studio">
                 <img src="images/gallery10.jpg" alt="Colorful painting from LAV Art Studio">
-            </button>
+            </a>
 
-            <button class="gallery-box" data-image="images/gallery11.jpg">
+            <a class="gallery-box" href="images/gallery11.jpg" data-lightbox="lav-gallery" data-title="Studio artwork from LAV Art Studio">
                 <img src="images/gallery11.jpg" alt="Studio artwork from LAV Art Studio">
-            </button>
+            </a>
 
-            <button class="gallery-box" data-image="images/gallery12.jpg">
+            <a class="gallery-box" href="images/gallery12.jpg" data-lightbox="lav-gallery" data-title="Finished artwork from LAV Art Studio">
                 <img src="images/gallery12.jpg" alt="Finished artwork from LAV Art Studio">
-            </button>
+            </a>
         </div>
 
         <p class="gallery-note">Click on any image to view larger</p>
     </section>
-
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose">×</button>
-        <img src="" alt="Large gallery preview" id="lightboxImage">
-    </div>
-
 </main>
 
 <footer class="site-footer">
     <p>© 2026 LAV Art Studio. All rights reserved.</p>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>

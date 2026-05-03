@@ -1,87 +1,72 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("contactForm");
 
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
+    if (form) {
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
 
-        let isValid = true;
+            let isValid = true;
 
-        const name = document.getElementById("name");
-        const email = document.getElementById("email");
-        const phone = document.getElementById("phone");
-        const course = document.getElementById("course");
-        const message = document.getElementById("message");
-        const source = document.getElementById("source");
-        const terms = document.getElementById("terms");
-        const preferredContact = document.querySelector('input[name="preferredContact"]:checked');
+            const name = document.getElementById("name");
+            const email = document.getElementById("email");
+            const phone = document.getElementById("phone");
+            const course = document.getElementById("course");
+            const message = document.getElementById("message");
+            const source = document.getElementById("source");
+            const terms = document.getElementById("terms");
+            const preferredContact = document.querySelector('input[name="preferredContact"]:checked');
 
-        clearErrors();
+            clearErrors();
 
-        if (name.value.trim().length < 2) {
-            setError(name, "nameError", "Please enter at least 2 characters");
-            isValid = false;
-        }
+            if (name.value.trim().length < 2) {
+                setError(name, "nameError", "Please enter at least 2 characters");
+                isValid = false;
+            }
 
-        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
-        if (!emailPattern.test(email.value.trim())) {
-            setError(email, "emailError", "Please enter a valid email");
-            isValid = false;
-        }
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,}$/;
+            if (!emailPattern.test(email.value.trim())) {
+                setError(email, "emailError", "Please enter a valid email");
+                isValid = false;
+            }
 
-        const phonePattern = /^[0-9+\s]{7,}$/;
-        if (!phonePattern.test(phone.value.trim())) {
-            setError(phone, "phoneError", "Please enter a valid phone number");
-            isValid = false;
-        }
+            const phonePattern = /^[0-9+\s]{7,}$/;
+            if (!phonePattern.test(phone.value.trim())) {
+                setError(phone, "phoneError", "Please enter a valid phone number");
+                isValid = false;
+            }
 
-        if (course.value === "") {
-            setError(course, "courseError", "Please select a course");
-            isValid = false;
-        }
+            if (course.value === "") {
+                setError(course, "courseError", "Please select a course");
+                isValid = false;
+            }
 
-        if (message.value.trim().length < 10) {
-            setError(message, "messageError", "Message must be at least 10 characters");
-            isValid = false;
-        }
+            if (message.value.trim().length < 10) {
+                setError(message, "messageError", "Message must be at least 10 characters");
+                isValid = false;
+            }
 
-        if (!preferredContact) {
-            document.getElementById("preferredContactError").textContent = "Please choose a contact method";
-            isValid = false;
-        }
+            if (!preferredContact) {
+                document.getElementById("preferredContactError").textContent = "Please choose a contact method";
+                isValid = false;
+            }
 
-        if (source.value === "") {
-            setError(source, "sourceError", "Please select an option");
-            isValid = false;
-        }
+            if (source.value === "") {
+                setError(source, "sourceError", "Please select an option");
+                isValid = false;
+            }
 
-        if (!terms.checked) {
-            document.getElementById("termsError").textContent = "You must agree to the terms";
-            isValid = false;
-        }
+            if (!terms.checked) {
+                document.getElementById("termsError").textContent = "You must agree to the terms";
+                isValid = false;
+            }
 
-        if (isValid) {
-            document.getElementById("successMessage").textContent = "Form submitted successfully!";
-            form.reset();
-        }
-    });
-
-    function setError(input, errorId, message) {
-        input.classList.add("input-error");
-        document.getElementById(errorId).textContent = message;
+            if (isValid) {
+                document.getElementById("successMessage").textContent = "Form submitted successfully!";
+                form.reset();
+            }
+        });
     }
 
-    function clearErrors() {
-        const errors = document.querySelectorAll(".error-message");
-        errors.forEach(e => e.textContent = "");
-
-        const inputs = document.querySelectorAll("input, select, textarea");
-        inputs.forEach(i => i.classList.remove("input-error"));
-
-        document.getElementById("successMessage").textContent = "";
-    }
-});
-
-document.addEventListener("DOMContentLoaded", function () {
     const tableBody = document.getElementById("coursesTableBody");
 
     if (tableBody) {
@@ -112,31 +97,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
             });
     }
-});
-document.addEventListener("DOMContentLoaded", function () {
-    const galleryButtons = document.querySelectorAll(".image-gallery .gallery-box");
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImage = document.getElementById("lightboxImage");
-    const lightboxClose = document.getElementById("lightboxClose");
 
-    if (galleryButtons.length && lightbox && lightboxImage && lightboxClose) {
-        galleryButtons.forEach(button => {
-            button.addEventListener("click", function () {
-                lightboxImage.src = this.dataset.image;
-                lightbox.classList.add("open");
-            });
+    function setError(input, errorId, message) {
+        input.classList.add("input-error");
+        document.getElementById(errorId).textContent = message;
+    }
+
+    function clearErrors() {
+        document.querySelectorAll(".error-message").forEach(error => {
+            error.textContent = "";
         });
 
-        lightboxClose.addEventListener("click", function () {
-            lightbox.classList.remove("open");
-            lightboxImage.src = "";
+        document.querySelectorAll("input, select, textarea").forEach(input => {
+            input.classList.remove("input-error");
         });
 
-        lightbox.addEventListener("click", function (e) {
-            if (e.target === lightbox) {
-                lightbox.classList.remove("open");
-                lightboxImage.src = "";
-            }
-        });
+        document.getElementById("successMessage").textContent = "";
     }
 });
