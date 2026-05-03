@@ -1003,3 +1003,10 @@ a {
     display: block;
     object-fit: cover;
 }
+
+.team-description {
+    max-width: 360px;
+    margin: 14px auto 0;
+    color: var(--muted);
+    line-height: 1.7;
+}
