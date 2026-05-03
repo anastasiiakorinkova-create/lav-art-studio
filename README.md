@@ -1,4 +1,3 @@
-# lav-art-studio
 # LAV Art Studio
 
 ## Description
